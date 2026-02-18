@@ -559,22 +559,23 @@ export class Game implements IGame, Logger {
   }
 
   public lastSoloGeneration(): number {
-    let lastGeneration = 14;
-    const options = this.gameOptions;
-    if (options.preludeExtension) {
-      lastGeneration -= 2;
-    }
+    // let lastGeneration = 14;
+    // const options = this.gameOptions;
+    // if (options.preludeExtension) {
+    //   lastGeneration -= 2;
+    // }
 
-    // Only add 2 more generations when using the track completion option
-    // and not the solo TR option.
-    //
-    // isSoloModeWin backs this up.
-    if (options.moonExpansion) {
-      if (!options.soloTR && options.requiresMoonTrackCompletion) {
-        lastGeneration += 2;
-      }
-    }
-    return lastGeneration;
+    // // Only add 2 more generations when using the track completion option
+    // // and not the solo TR option.
+    // //
+    // // isSoloModeWin backs this up.
+    // if (options.moonExpansion) {
+    //   if (!options.soloTR && options.requiresMoonTrackCompletion) {
+    //     lastGeneration += 2;
+    //   }
+    // }
+    // return lastGeneration;
+    return Number.MAX_SAFE_INTEGER;
   }
 
   public isSoloModeWin(): boolean {
